@@ -1,0 +1,15 @@
+{
+  "name": "agentmart-plugins",
+  "description": "AgentMart plugins: ready, tested parts and always-on utilities your agent can use instead of building them from scratch.",
+  "owner": {
+    "name": "Ciphyr Tech OÜ",
+    "email": "support@ciphyr.ai"
+  },
+  "plugins": [
+    {
+      "name": "agentmart",
+      "source": "./plugins/agentmart",
+      "description": "Connects the AgentMart MCP server and adds two skills: check the AgentMart shelf before building common agent infrastructure, and buy only with your human's approval."
+    }
+  ]
+}

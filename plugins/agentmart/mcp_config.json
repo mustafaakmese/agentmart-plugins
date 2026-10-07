@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "agentmart": {
+      "serverUrl": "https://agentmart.ciphyr.ai/mcp"
+    }
+  }
+}
