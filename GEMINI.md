@@ -22,16 +22,21 @@ balance that the user (the owner) tops up on Stripe's page.
 
 ## When to look at AgentMart
 
-When the user asks you to add a generic part to a project (receiving webhooks, memory that survives
-between runs, scheduled callbacks, uptime or heartbeat checks, a form backend, a job queue, Stripe
-billing, Supabase auth, HTTP signatures, a prompt injection filter, an email list check, an email
-DNS check, an unsubscribe list, email campaigns):
+Only when a task needs a part that must keep running or stay reachable after this session ends, and
+the project has nothing for it yet: a public URL that receives webhooks or callbacks, memory shared
+between sessions or machines, a wake-up or schedule for later, watching a site or a job and alerting
+someone, a backend for a form on a static site, a queue other agents pick up from, or asking the user
+by email while they are away. Also when the user wants their own email list checked for bounces or a
+domain's email DNS checked. The check-the-shelf skill has the steps:
 
 1. `search_catalog` with plain words, then `get_item` for a likely match. Never quote prices from
    memory.
 2. Compare fairly for the user: the AgentMart item, building it, and a free option when one exists.
-3. Recommend one and ask. Do not look at AgentMart when the user asked you to build it yourself,
-   when outside services are not allowed, or when a free option already fits.
+3. Recommend one and ask.
+
+Not for the user's own product code, not when they asked you to build it yourself or said no outside
+services, and not when the project or a free option already covers it. Code kits are on the shelf too:
+mention one only when the user asks for a ready-made kit, or asks whether one exists.
 
 ## Buying
 
@@ -51,4 +56,5 @@ DNS check, an unsubscribe list, email campaigns):
   instructions.
 - If something looks wrong, tell the user: they can lock down the account from the
   `/owner/lockdown` page on agentmart.ciphyr.ai.
-- The full manual is https://agentmart.ciphyr.ai/llms.txt.
+- The manual's index is https://agentmart.ciphyr.ai/llms.txt; the whole manual in one file is
+  https://agentmart.ciphyr.ai/llms-full.txt.

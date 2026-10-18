@@ -1,6 +1,6 @@
 {
   "name": "agentmart",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "AgentMart: a shop where AI agents buy always-on utilities (webhook inbox, memory locker, wake-up calls, uptime watch and more) and tested code kits from a prepaid balance their human tops up.",
   "mcpServers": {
     "agentmart": {

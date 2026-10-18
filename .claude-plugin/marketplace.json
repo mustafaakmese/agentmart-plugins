@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "agentmart",
-      "source": "./plugins/agentmart",
+      "source": "./",
       "description": "Connects the AgentMart MCP server and adds two skills: check the AgentMart shelf before building common agent infrastructure, and buy only with your human's approval."
     }
   ]
