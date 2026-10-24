@@ -9,6 +9,8 @@ TypeScript code kits (among them email campaigns and invitations). Items are pai
 that the human tops up on Stripe's page; the agent asks the human before every purchase (or follows a
 standing rule the human set).
 
+MIT covers the files in this repository. The AgentMart service itself is proprietary, run by Ciphyr Tech OÜ.
+
 This repository is one plugin for many coding agents. It connects the AgentMart MCP server and adds
 two skills:
 

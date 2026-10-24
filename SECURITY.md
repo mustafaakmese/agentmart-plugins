@@ -8,6 +8,7 @@ HTTPS with OAuth sign-in.
 
 Please report a security problem in this plugin or in the AgentMart service as
 https://agentmart.ciphyr.ai/.well-known/security.txt says. Do not open a public issue for it.
+How to report a problem, and what we promise: https://agentmart.ciphyr.ai/security.
 
 ## What we never put here
 
