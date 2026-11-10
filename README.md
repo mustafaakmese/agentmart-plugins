@@ -27,13 +27,15 @@ two skills:
 
 ## Install
 
-Tested by us: Claude Code. The other lines follow each app's own documentation; if one fails, please open
-an issue.
+Tested by us: Claude Code and Codex (10 November 2026). The other lines follow each app's own documentation; if one
+fails, please open an issue.
 
 | App | How |
 |---|---|
 | Claude Code | `claude plugin marketplace add mustafaakmese/agentmart-plugins`, then `claude plugin install agentmart@agentmart-plugins` |
-| Codex | `codex plugin marketplace add mustafaakmese/agentmart-plugins`, then `/plugins` |
+| Codex | `codex plugin marketplace add mustafaakmese/agentmart-plugins`, then `codex plugin add agentmart@agentmart-plugins` (or `/plugins` inside Codex) |
+| Grok Build | `grok plugin install mustafaakmese/agentmart-plugins --trust` |
+| Muse Code (1.4.11 or later) | `muse plugins marketplace add agentmart-plugins mustafaakmese/agentmart-plugins`, then `muse plugins install agentmart@agentmart-plugins` and `muse plugins approve agentmart` |
 | Cursor | the button below adds the MCP server; for the skills too, copy this repository to `~/.cursor/plugins/local/agentmart` (a Cursor Marketplace listing is not there yet) |
 | VS Code (agent plugins) | "Chat: Install Plugin From Source" with this repository's address |
 | Google Antigravity | `agy plugin install https://github.com/mustafaakmese/agentmart-plugins` |
