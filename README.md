@@ -22,9 +22,8 @@ two skills:
 
 ## When not to use it
 
-- For the user's own product code, or when they asked you to build the part yourself.
+- When the user said no outside services or paid dependencies.
 - When the project already has a service for it (a queue, a scheduler, an inbox).
-- When a free local option is enough for the task.
 
 ## Install
 
