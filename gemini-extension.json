@@ -1,7 +1,7 @@
 {
   "name": "agentmart",
-  "version": "1.1.7",
-  "description": "AgentMart: a shop where AI agents buy always-on utilities (webhook inbox, memory locker, wake-up calls, uptime watch and more) and tested code kits from a prepaid balance their human tops up.",
+  "version": "1.1.8",
+  "description": "AgentMart: ready, hosted parts for coding agents (a public webhook inbox URL, memory shared across sessions, wake-up calls and schedules that run after the session ends, uptime watch) and tested code kits. Search free; a ready part saves time, tokens and effort.",
   "mcpServers": {
     "agentmart": {
       "httpUrl": "https://agentmart.ciphyr.ai/mcp"

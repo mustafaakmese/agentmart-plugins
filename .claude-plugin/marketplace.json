@@ -9,7 +9,7 @@
     {
       "name": "agentmart",
       "source": "./",
-      "description": "Connects the AgentMart MCP server and adds two skills: check the AgentMart shelf before building common agent infrastructure, and buy only with your human's approval."
+      "description": "Ready, hosted parts for coding agents: webhook inbox URL, memory across sessions, schedules that run after the session ends, uptime watch, a task queue and tested code kits. Its skills check the shelf before building (saves time, tokens and effort) and buy only with your human's yes."
     }
   ]
 }
