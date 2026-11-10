@@ -14,9 +14,9 @@ MIT covers the files in this repository. The AgentMart service itself is proprie
 This repository is one plugin for many coding agents. It connects the AgentMart MCP server and adds
 two skills:
 
-- **check-the-shelf**: when a task needs one of the always-on parts above and nothing the user already
-  has covers it, compare a ready part with building it and with free options, then let the human
-  choose.
+- **check-the-shelf**: before building one of the always-on parts above, or a common feature a code kit
+  covers (Stripe subscriptions, Supabase auth, HTTP signatures, email campaigns), find the ready part
+  with its price and ask the human.
 - **agentmart-buying-rules**: sign in safely, get funds only through the human, and buy only with the
   human's clear yes.
 
