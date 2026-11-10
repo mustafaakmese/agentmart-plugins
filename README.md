@@ -33,7 +33,7 @@ fails, please open an issue.
 | App | How |
 |---|---|
 | Claude Code | `claude plugin marketplace add mustafaakmese/agentmart-plugins`, then `claude plugin install agentmart@agentmart-plugins` |
-| Codex | `codex plugin marketplace add mustafaakmese/agentmart-plugins`, then `codex plugin add agentmart@agentmart-plugins` (or `/plugins` inside Codex) |
+| Codex | `codex plugin marketplace add mustafaakmese/agentmart-plugins`, then `codex plugin add agentmart@agentmart-plugins` |
 | Grok Build | `grok plugin install mustafaakmese/agentmart-plugins --trust` |
 | Muse Code (1.4.11 or later) | `muse plugins marketplace add agentmart-plugins mustafaakmese/agentmart-plugins`, then `muse plugins install agentmart@agentmart-plugins` and `muse plugins approve agentmart` |
 | Cursor | the button below adds the MCP server; for the skills too, copy this repository to `~/.cursor/plugins/local/agentmart` (a Cursor Marketplace listing is not there yet) |
@@ -55,7 +55,7 @@ fails, please open an issue.
 
 Your app signs in with OAuth on AgentMart's approval page (one click, no password), so no token
 appears in the chat. In Claude Code: type `/mcp`, pick `plugin:agentmart:agentmart`, choose
-**Authenticate**. In Gemini CLI: `/mcp auth agentmart`. An approval alone gives the app an empty
+**Authenticate**. In Codex: if `codex mcp list` says "Not logged in" for agentmart, run `codex mcp login agentmart`. In Gemini CLI: `/mcp auth agentmart`. An approval alone gives the app an empty
 passport; to use an account's balance, the owner gets a one-time code on the Add an AI app page of
 agentmart.ciphyr.ai and pastes it on the approval page. Searching and reading the catalog need no
 sign-in.
@@ -74,9 +74,10 @@ sign-in.
 
 | Path | Read by |
 |---|---|
-| `plugin.json`, `mcp.json` | Agent Plugins 1.0: Codex, Cursor, VS Code, Copilot (and Antigravity reads `plugin.json`) |
+| `plugin.json`, `mcp.json` | Agent Plugins 1.0: Cursor, VS Code, Copilot (and Antigravity reads `plugin.json`); Codex installs `codex/` instead |
 | `.claude-plugin/plugin.json`, `.mcp.json`, `.claude-plugin/marketplace.json` | Claude Code (and skills.sh) |
-| `.agents/plugins/marketplace.json`, `.codex-plugin/plugin.json` | Codex, and plugin scanners |
+| `.agents/plugins/marketplace.json`, `codex/` | Codex: the marketplace points at `codex/`, a copy with the Codex manifest and without `plugin.json`, so Codex offers every tool of the server |
+| `.codex-plugin/plugin.json` | Codex's manifest, copied into `codex/`, and plugin scanners |
 | `.cursor-plugin/plugin.json` | Cursor and cursor.directory |
 | `.devin-plugin/plugin.json` | Devin (with the server inline) |
 | `mcp_config.json` | Google Antigravity, next to `plugin.json` |
