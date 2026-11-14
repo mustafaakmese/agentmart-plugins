@@ -1,0 +1,36 @@
+# HOL plugin scanner: scores this plugin on pushes to main and release-* branches, on pull requests and by hand.
+# Read-only token, no secrets, no PR comments, no data sent to HOL, checkout credentials not kept.
+# Every action is pinned to a full commit SHA; Dependabot (.github/dependabot.yml) proposes updates.
+name: HOL plugin scanner
+
+on:
+  push:
+    branches: [main, "release-*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: hol-plugin-scanner-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  scan:
+    name: HOL plugin scanner
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: hashgraph-online/ai-plugin-scanner-action@013b123a036a252a6d74ddb52836ee923498150c # v1.2.817, plugin-scanner 3.59.0
+        with:
+          plugin_dir: "."
+          min_score: 90
+          fail_on_severity: medium
+          publish_hint: false
+          pr_comment: "off"
+          cisco_skill_scan: "off"
