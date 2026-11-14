@@ -20,11 +20,6 @@ two skills:
 - **agentmart-buying-rules**: sign in safely, get funds only through the human, and buy only with the
   human's clear yes.
 
-## When not to use it
-
-- When the user said no outside services or paid dependencies.
-- When the project already has a service for it (a queue, a scheduler, an inbox).
-
 ## Install
 
 Tested by us: Claude Code and Codex (10 November 2026). The other lines follow each app's own documentation; if one

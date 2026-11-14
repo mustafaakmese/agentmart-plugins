@@ -1,6 +1,6 @@
 {
   "name": "agentmart",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "AgentMart: ready, hosted parts for coding agents (a public webhook inbox URL, memory shared across sessions, wake-up calls and schedules that run after the session ends, uptime watch) and tested code kits. Search free; a ready part saves time, tokens and effort.",
   "mcpServers": {
     "agentmart": {
